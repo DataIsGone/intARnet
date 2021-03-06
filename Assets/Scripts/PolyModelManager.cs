@@ -28,31 +28,7 @@ public class PolyModelManager : MonoBehaviour
         // Up to 20 results per page.
         req.pageSize = numEntries;
         // Send the request.
-        PolyApi.ListAssets(req, MyCallback);
-        for (int i = 0; i < numEntries; ++i) {
-            Vector3 pos = new Vector3(imageList.transform.position.x + 100 * i, imageList.transform.position.y, imageList.transform.position.z);
-            entries.Add(Instantiate(entry, imageList.transform.position, Quaternion.identity));
-            entries[i].GetComponent<RectTransform>().position = new Vector2(entries[i].GetComponent<RectTransform>().position.x + i * 100, entries[i].GetComponent<RectTransform>().position.y);
-            entries[i].SetActive(true);
-            entries[i].transform.parent = imageList.transform;
-        }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        PolyAsset asset;
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            asset = polies[0];
-            PolyApi.Import(asset, PolyImportOptions.Default(), Spawn);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            asset = polies[1];
-            PolyApi.Import(asset, PolyImportOptions.Default(), Spawn);
-        }
+        PolyApi.ListAssets(req, MyCallback);        
     }
 
     private void Spawn(PolyAsset asset, PolyStatusOr<PolyImportResult> result)
@@ -64,7 +40,14 @@ public class PolyModelManager : MonoBehaviour
             return;
         }
         // Success. Place the result.Value.gameObject in your scene.
-        Instantiate(result.Value.gameObject, result.Value.gameObject.transform.position, Quaternion.identity);
+        GameObject model = Instantiate(result.Value.gameObject, result.Value.gameObject.transform.position, Quaternion.identity);
+        model.AddComponent<MoveObj>();
+        model.AddComponent<BoxCollider>();
+        Destroy(GameObject.Find("PolyImport"));
+    }
+
+    public void buttonPress(PolyAsset asset) {
+        PolyApi.Import(asset, PolyImportOptions.Default(), Spawn);       
     }
 
     void MyCallback(PolyStatusOr<PolyListAssetsResult> result)
@@ -77,11 +60,20 @@ public class PolyModelManager : MonoBehaviour
         // Success. result.Value is a PolyListAssetsResult and
         // result.Value.assets is a list of PolyAssets.
         polies = result.Value.assets;
+        int i = 0;
         //Render thumbnails
         foreach (PolyAsset poly in polies)
-        {
-            Debug.Log(poly.name);
+        {            
             PolyApi.FetchThumbnail(poly, DisplayMenu);
+            Vector3 pos = new Vector3(imageList.transform.position.x + 100 * i, imageList.transform.position.y, imageList.transform.position.z);
+            entries.Add(Instantiate(entry, imageList.transform.position, Quaternion.identity));
+            entry.name = "poly_" + i;
+            entries[i].GetComponent<RectTransform>().position = new Vector2(entries[i].GetComponent<RectTransform>().position.x + i * 100, entries[i].GetComponent<RectTransform>().position.y);
+            entries[i].SetActive(true);
+            entries[i].transform.parent = imageList.transform;
+            UnityEngine.Events.UnityAction action = delegate { buttonPress(poly); };
+            entries[i].GetComponent<Button>().onClick.AddListener(action);
+            ++i;
         }
     }
 
