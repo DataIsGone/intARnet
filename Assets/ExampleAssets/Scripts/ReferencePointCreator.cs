@@ -9,7 +9,7 @@ using UnityEngine.XR.ARSubsystems;
 // Reference points are a particular point in space that you are asking your device to track.
 //
 
-[RequireComponent(typeof(ARReferencePointManager))]
+[RequireComponent(typeof(ARAnchorManager))]
 [RequireComponent(typeof(ARRaycastManager))]
 [RequireComponent(typeof(ARPlaneManager))]
 public class ReferencePointCreator : MonoBehaviour
@@ -29,7 +29,7 @@ public class ReferencePointCreator : MonoBehaviour
     {
         foreach (var referencePoint in m_ReferencePoints)
         {
-            m_ReferencePointManager.RemoveReferencePoint(referencePoint);
+            m_ReferencePointManager.RemoveAnchor(referencePoint);
         }
         m_ReferencePoints.Clear();
     }
@@ -41,9 +41,9 @@ public class ReferencePointCreator : MonoBehaviour
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
-        m_ReferencePointManager = GetComponent<ARReferencePointManager>();
+        m_ReferencePointManager = GetComponent<ARAnchorManager>();
         m_PlaneManager = GetComponent<ARPlaneManager>();
-        m_ReferencePoints = new List<ARReferencePoint>();
+        m_ReferencePoints = new List<ARAnchor>();
     }
 
     void Update()
@@ -68,7 +68,7 @@ public class ReferencePointCreator : MonoBehaviour
             // and afterwards instantiates an instance of your chosen prefab at that point.
             // This prefab instance is parented to the reference point to make sure the position of the prefab is consistent
             // with the reference point, since a reference point attached to an ARPlane will be updated automatically by the ARReferencePointManager as the ARPlane's exact position is refined.
-            var referencePoint = m_ReferencePointManager.AttachReferencePoint(hitPlane, hitPose);
+            var referencePoint = m_ReferencePointManager.AttachAnchor(hitPlane, hitPose);
             Instantiate(m_ReferencePointPrefab, referencePoint.transform);
 
             if (referencePoint == null)
@@ -85,11 +85,11 @@ public class ReferencePointCreator : MonoBehaviour
 
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
-    List<ARReferencePoint> m_ReferencePoints;
+    List<ARAnchor> m_ReferencePoints;
 
     ARRaycastManager m_RaycastManager;
 
-    ARReferencePointManager m_ReferencePointManager;
+    ARAnchorManager m_ReferencePointManager;
 
     ARPlaneManager m_PlaneManager;
 }
