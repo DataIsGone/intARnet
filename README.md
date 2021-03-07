@@ -1,6 +1,6 @@
 # intARnet
 
-_**The augmented-reality geospatial social media platform to connect with your community**_
+[_**The augmented-reality geospatial social media platform to connect with your community**_] (https://youtu.be/2WW6OzM3Tsc)
 
 _Submitted to Tartan Hacks v10 (2021)_
 
