@@ -33,13 +33,16 @@ Azure Spatial Anchors :(
 
 ## Who We Are
 
-**_We're Table 1._**
+**_We're Table 1, a hackathon team that enjoys XR and gamification._**
 
 **Mitchell Kuppersmith**: AR + UI Development // [LinkedIn](https://www.linkedin.com/in/mitchell-kuppersmith/)
 
 **Nancy Zuo**: UX + Graphic Design // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone) | [Portfolio](https://nancyzuo.me/)
 
-**Ryan Davis**: AR + iOS Development // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/)_ | [Twitter](https://twitter.com/dataisgone)
+**Ryan Davis**: AR + iOS Development // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone)
+
+## Hackathon Info
+_Submitted to TartanHacks v10 (2021)
 
 ## Technologies
 **AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
