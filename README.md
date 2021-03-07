@@ -23,8 +23,10 @@ Azure Spatial Anchors :(
 - An incredibly aesthetic user interface reminiscent of the late 90s
 
 ## What we learned
-- How to design for AR, 90s design style
-- 
+- How to design for AR
+- 90s design style
+- How to work with Azure spatial anchors
+- iOS development
 
 ## What's next for IntARnet
 - Implementing Azure for geospatial anchors
