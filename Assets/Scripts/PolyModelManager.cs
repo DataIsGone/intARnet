@@ -40,7 +40,7 @@ public class PolyModelManager : MonoBehaviour
             return;
         }
         // Success. Place the result.Value.gameObject in your scene.
-        GameObject model = Instantiate(result.Value.gameObject, result.Value.gameObject.transform.position, Quaternion.identity);
+        GameObject model = Instantiate(result.Value.gameObject, Camera.main.transform.position + Camera.main.transform.forward * 1.5f, Quaternion.identity);
         model.AddComponent<MoveObj>();
         model.AddComponent<BoxCollider>();
         Destroy(GameObject.Find("PolyImport"));

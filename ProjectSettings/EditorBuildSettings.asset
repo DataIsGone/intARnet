@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DrawingTest.unity
     guid: de7255af7fc273946adeff93df4c18df
+  - enabled: 1
+    path: Assets/Scenes/PhoneUI.unity
+    guid: 955125cb8b17d244f9d72c731ce88d41
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

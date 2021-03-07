@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Draw : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class Draw : MonoBehaviour
     public GameObject stroke;
     public GameObject spacePenPoint;
     public GameObject currentStroke;
+    public Image pencil;
+    public Sprite red;
+    public Sprite green;
+    public Sprite blue;
+    public Sprite white;
 
     public static bool drawing = false;
 
@@ -42,16 +48,20 @@ public class Draw : MonoBehaviour
 
     public void ChangeColor(int i) {
         Color cool = Color.white;
+        pencil.sprite = white;
         if (i == 1) //r
         {
             cool = Color.red;
+            pencil.sprite = red;
         }
         else if (i == 2) { // g
             cool = Color.green;
+            pencil.sprite = green;
         }
         else if (i == 3) //b
         {
             cool = Color.blue;
+            pencil.sprite = blue;
         }
         spacePenPoint.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", cool);
         currentStroke.GetComponent<TrailRenderer>().startColor = cool;
