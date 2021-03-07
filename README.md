@@ -2,6 +2,7 @@
 
 ## Technologies
 **AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
+
 **Design**: Figma, Aseprite, Adobe Photoshop
 
 ## Credits
