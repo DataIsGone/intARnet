@@ -6,19 +6,19 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+/*
 #if UNIT_IOS
     using Microsoft.Azure.SpatialAnchors.Unity.IOS.ARKit;
 #elif UNITY_ANDROID
     using Microsoft.Azure.SpatialAnchors.Unity.Android;
 #endif
-
+*/
 namespace Microsoft.Azure.SpatialAnchors {
     [RequireComponent(typeof(ARRaycastManager))]
     public class ARPlaceObject : MonoBehaviour
     {
         // For Azure Spatial Anchors
-        private CloudSpatialAnchorSession cloudSession;
+        //private CloudSpatialAnchorSession cloudSession;
         private XRCameraFrame xRCameraFrame;
 
         // Reference to the AR Raycast Manager
@@ -34,12 +34,12 @@ namespace Microsoft.Azure.SpatialAnchors {
         private void Start()
         {
             // --- Azure Spatial Anchor setup
-            this.cloudSession = new CloudSpatialAnchorSession();
+            //this.cloudSession = new CloudSpatialAnchorSession();
             SetUpAzureKeys();
 
             // Assumes iPhone or Android device is being used
-            this.cloudSession.Session = aRSession.subsystem.nativePtr.GetPlatformPointer();
-            this.cloudSession.Start();
+            //this.cloudSession.Session = aRSession.subsystem.nativePtr.GetPlatformPointer();
+            //this.cloudSession.Start();
 
             raycastManager = GetComponent<ARRaycastManager>();
             prefabInstance = Instantiate(prefab);
@@ -77,14 +77,14 @@ namespace Microsoft.Azure.SpatialAnchors {
             Vector3 hitPosition = new Vector3();
             Vector2 screenCenter = new Vector2(0.5f, 0.5f);
             List<ARRaycastHit> aRRaycastHits = new List<ARRaycastHit>();
-            if(arRaycastManager.Raycast(screenCenter, aRRaycastHits) && aRRaycastHits.Count > 0)
+           /* if(arRaycastManager.Raycast(screenCenter, aRRaycastHits) && aRRaycastHits.Count > 0)
             {
                 ARRaycastHit hit = aRRaycastHits[0];
                 hitPosition = hit.pose.position;
-            }
+            }*/
 
             Quaternion rotation = Quaternion.AngleAxis(0, Vector3.up);
-            this.localAnchor = GameObject.Instantiate(prefab, hitPosition, rotation);
+            /*this.localAnchor = GameObject.Instantiate(prefab, hitPosition, rotation);
             this.localAnchor.AddComponent<CloudNativeAnchor>();
 
             // Shows content at this anchor
@@ -103,18 +103,18 @@ namespace Microsoft.Azure.SpatialAnchors {
             // `RecommendedForCreateProgress` must be above 1.0
             SessionStatus value = await this.cloudSession.GetSessionStatusAsync();
             if (value.RecommendedForCreateProgress < 1.0f) return;
-
+            */
         }
 
         private void SetUpAzureKeys()
         {
-        this.cloudSession.Configuration.AccountKey = @"MyAccountKey";
-        this.cloudSession.Configuration.AccessToken = @"MyAccessToken";
-        this.cloudSession.Configuration.AuthenticationToken = @"MyAuthenticationToken";
+        //this.cloudSession.Configuration.AccountKey = @"MyAccountKey";
+        //this.cloudSession.Configuration.AccessToken = @"MyAccessToken";
+        //this.cloudSession.Configuration.AuthenticationToken = @"MyAuthenticationToken";
         }
 
         private void ProvideFramesToSession()
-        {
+        {/*
             if (aRCameraManager.subsystem.TryGetLatestFrame(cameraParams, out xRCameraFrame))
             {
                 long latestFrameTimeStamp = xRCameraFrame.timestampNs;
@@ -127,6 +127,7 @@ namespace Microsoft.Azure.SpatialAnchors {
                     lastFrameProcessedTimeStamp = latestFrameTimeStamp;
                 }
             }
+            */
         }
     } // end class
 }
