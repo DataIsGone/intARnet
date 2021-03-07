@@ -30,14 +30,17 @@ How to design for AR, 90s design style
 -Implementing NFT for buying spaces as canvases or buying users' art
 -Creating better tools for making posts
 
-# Team: Table 1
+## Who We Are
+
+**_We're Table 1._**
+
 **Mitchell Kuppersmith**: AR + UI Development
 
 **Nancy Zuo**: UX + Graphic Design
 
 **Ryan Davis**: AR + iOS Development 
 
-# Technologies
+## Technologies
 **AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
 
 **Design**: Figma, Aseprite, Adobe Photoshop
