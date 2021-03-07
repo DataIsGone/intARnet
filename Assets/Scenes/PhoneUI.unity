@@ -691,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 4982218542414706564, guid: 08aa0197247a90247a53b7cde4687c57,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6597900490637111590, guid: 08aa0197247a90247a53b7cde4687c57,
         type: 3}
@@ -2489,7 +2489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1875296843
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2567,9 +2567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14
+  cfuStatus: PSXEffects v1.14 - update available (click to update).
   sections: 01010100
-  customRes: {x: 265, y: 471}
+  customRes: {x: 128, y: 227}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
