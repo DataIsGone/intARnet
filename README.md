@@ -35,11 +35,11 @@ Azure Spatial Anchors :(
 
 **_We're Table 1._**
 
-**Mitchell Kuppersmith**: AR + UI Development
+**Mitchell Kuppersmith**: AR + UI Development // [LinkedIn](https://www.linkedin.com/in/mitchell-kuppersmith/)
 
-**Nancy Zuo**: UX + Graphic Design
+**Nancy Zuo**: UX + Graphic Design // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone) | [Portfolio](https://nancyzuo.me/)
 
-**Ryan Davis**: AR + iOS Development 
+**Ryan Davis**: AR + iOS Development // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/)_ | [Twitter](https://twitter.com/dataisgone)
 
 ## Technologies
 **AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
