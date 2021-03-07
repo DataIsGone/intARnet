@@ -11,9 +11,10 @@ It's easy to get caught up in meaningless doomscrolling, spending hours doing no
 IntARnet is an AR social media where posts are drawings, texts, and 3D models placed around the world by users. In order to view a post, a user must walk to it as all posts have a geospatial anchor tying it to a physical location in the world. This means content the user will see will almost always likely be relevant to them as content must be created physically placed in the world by people in their community. In addition to this, doomscrolling is difficult as users must go walk outside to see posts, encouraging a more active lifestyle.
 
 ## How was IntARnet made?
-We used Unity3D with ARFoundation, ARKit, ARCore for the AR implementation
-Google Poly
-Art was created using Photoshop, Aseprite, and Figma
+- **AR Implementation**: Unity3D with ARFoundation, ARKit, and ARCore 
+- **3D Content**: Imported from Google Poly
+- **Art & Graphic Design**: Photoshop, Aseprite, and Figma
+
 
 ## Challenges we ran into
 Azure Spatial Anchors :(
@@ -48,12 +49,6 @@ _Submitted to TartanHacks v10 (2021)_
 
 - Demo: [Pitch Video](https://youtu.be/2WW6OzM3Tsc) 
 - Presentation: [Figma](https://www.figma.com/proto/K9vbHC7FOHrSxGh8OKOMYS/intarnet?node-id=1%3A2&viewport=-3432%2C516%2C0.2884855270385742&scaling=contain)
-
-
-## Technologies
-**AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
-
-**Design**: Figma, Aseprite, Adobe Photoshop
 
 ## Credits
 **Fonts**: [Early Gameboy](https://www.dafont.com/early-gameboy.font) | [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
