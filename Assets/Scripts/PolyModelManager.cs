@@ -10,6 +10,7 @@ public class PolyModelManager : MonoBehaviour
     List<PolyAsset> polies;
     public GameObject entry;
     public GameObject imageList;
+    private GameObject totalPost;
     public List<GameObject> entries;
     int numEntries = 40;
     int counter = 0;
@@ -28,7 +29,8 @@ public class PolyModelManager : MonoBehaviour
         // Up to 20 results per page.
         req.pageSize = numEntries;
         // Send the request.
-        PolyApi.ListAssets(req, MyCallback);        
+        PolyApi.ListAssets(req, MyCallback);
+        totalPost = GameObject.Find("TotalPost");
     }
 
     private void Spawn(PolyAsset asset, PolyStatusOr<PolyImportResult> result)
@@ -44,6 +46,7 @@ public class PolyModelManager : MonoBehaviour
         model.AddComponent<MoveObj>();
         model.AddComponent<BoxCollider>();
         Destroy(GameObject.Find("PolyImport"));
+        model.transform.SetParent(totalPost.transform);
     }
 
     public void buttonPress(PolyAsset asset) {

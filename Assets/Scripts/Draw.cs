@@ -9,6 +9,7 @@ public class Draw : MonoBehaviour
     public GameObject stroke;
     public GameObject spacePenPoint;
     public GameObject currentStroke;
+    private GameObject totalPost;
     public Image pencil;
     public Sprite red;
     public Sprite green;
@@ -23,7 +24,7 @@ public class Draw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        totalPost = GameObject.Find("TotalPost");
     }
 
     // Update is called once per frame
@@ -71,7 +72,7 @@ public class Draw : MonoBehaviour
     public void EndStroke()
     {
         drawing = false;
-        currentStroke.transform.parent = null;
+        currentStroke.transform.SetParent(totalPost.transform);
     }
 
 }

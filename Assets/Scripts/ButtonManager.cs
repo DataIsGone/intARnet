@@ -12,15 +12,76 @@ public class ButtonManager : MonoBehaviour
     public GameObject drawMenu;
     public GameObject penPoint;
     public GameObject viewPos;
+    public GameObject addPost;
+    public GameObject postUI;
+    private GameObject totalPost;
+    public GameObject submit;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        totalPost = GameObject.Find("TotalPost");
+    }
+
+    public void postModeActive() {
+        if (addPost.activeSelf)
+        {
+            postUI.SetActive(true);
+            addPost.SetActive(false);
+        }
+        else {
+            postUI.SetActive(false);
+            addPost.SetActive(true);
+        }
+    }
+
+    public void submitPost() {
+        postUI.SetActive(false);
+        addPost.SetActive(true);
+        //Send TotalPost somewhere
+        for (int i = totalPost.transform.childCount - 1; i >= 0; --i) {
+            Destroy(totalPost.transform.GetChild(i));
+        }
     }
 
     public void setStickerMenuActive(bool b) {
-        modelInterface.SetActive(b);
+        if (modelInterface.activeSelf)
+        {
+            modelInterface.SetActive(false);
+        }
+        else
+        {
+            modelInterface.SetActive(b);
+        }
+    }
+    public void setTextMenuActive(bool b)
+    {
+        if (textInterface.activeSelf)
+        {
+            textInterface.SetActive(false);
+        }
+        else
+        {
+            textInterface.SetActive(b);
+        }
+    }
+
+    public void setDrawMenuActuve(bool b)
+    {
+        submit.SetActive(true);
+        if (drawMenu.activeSelf)
+        {
+            drawMenu.SetActive(false);
+            penPoint.SetActive(false);
+        }
+        else
+        {
+            if (b) {
+                submit.SetActive(false);
+            }
+            penPoint.SetActive(b);
+            drawMenu.SetActive(b);
+        }
     }
 
     public void openKeyboard() {
@@ -36,17 +97,10 @@ public class ButtonManager : MonoBehaviour
         post.AddComponent<MoveObj>();
         post.AddComponent<BoxCollider>();
         post.GetComponent<BoxCollider>().size = new Vector3(post.GetComponent<RectTransform>().sizeDelta.x, post.GetComponent<RectTransform>().sizeDelta.y, 3);
-        //post.transform.LookAt(viewPos.transform.position);
+        post.transform.SetParent(totalPost.transform);
     }
 
-    public void setTextMenuActive(bool b) {
-        textInterface.SetActive(b);
-    }
-
-    public void setDrawMenuActuve(bool b) {
-        penPoint.SetActive(b);
-        drawMenu.SetActive(b);
-    }
+    
 
     // Update is called once per frame
     void Update()
