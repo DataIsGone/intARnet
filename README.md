@@ -20,3 +20,5 @@ _Submitted to Tartan Hacks v10 (2021)_
 
 ## Credits
 **Fonts**: [Early Gameboy](https://www.dafont.com/early-gameboy.font)
+
+**Music**: ["Hourglass Meadow", by Oliver Buckland](https://www.youtube.com/watch?v=Urs2oS83Cw0)
