@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-#if UNIT_IOS
+#if UNITY_IOS
     using Microsoft.Azure.SpatialAnchors.Unity.IOS.ARKit;
 #elif UNITY_ANDROID
     using Microsoft.Azure.SpatialAnchors.Unity.Android;
