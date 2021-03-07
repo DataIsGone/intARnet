@@ -4,9 +4,6 @@ Welcome to the intARnet, the augmented-reality geospatial social media platform 
 
 [Enjoy your stay.](https://youtu.be/2WW6OzM3Tsc)
 
-
-_Submitted to Tartan Hacks v10 (2021)_
-
 ## Team: Table 1
 **Mitchell Kuppersmith**: AR + UI Development
 
