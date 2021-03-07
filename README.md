@@ -1,8 +1,7 @@
 # intARnet
 
-[Welcome to the intARnet. Enjoy your stay.](https://youtu.be/2WW6OzM3Tsc)
+_**Welcome to the intARnet, the augmented-reality geospatial social media platform to connect with your community**_ [Enjoy your stay.](https://youtu.be/2WW6OzM3Tsc)
 
-_**The augmented-reality geospatial social media platform to connect with your community**_
 
 _Submitted to Tartan Hacks v10 (2021)_
 
