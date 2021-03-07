@@ -1,5 +1,6 @@
 # intARnet
-## The augmented-reality geospatial social media platform to connect with your community 
+
+_**The augmented-reality geospatial social media platform to connect with your community**_
 
 _Submitted to Tartan Hacks v10 (2021)_
 
