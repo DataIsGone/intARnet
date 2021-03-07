@@ -37,14 +37,18 @@ Azure Spatial Anchors :(
 
 **_We're Table 1, a hackathon team that enjoys XR and gamification._**
 
-**Mitchell Kuppersmith**: AR + UI Development // [LinkedIn](https://www.linkedin.com/in/mitchell-kuppersmith/)
+- **Mitchell Kuppersmith**: AR + UI Development // [LinkedIn](https://www.linkedin.com/in/mitchell-kuppersmith/)
 
-**Nancy Zuo**: UX + Graphic Design // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone) | [Portfolio](https://nancyzuo.me/)
+- **Nancy Zuo**: UX + Graphic Design // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone) | [Portfolio](https://nancyzuo.me/)
 
-**Ryan Davis**: AR + iOS Development // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone)
+- **Ryan Davis**: AR + iOS Development // [LinkedIn](https://www.linkedin.com/in/ryanalexdavis/) | [Twitter](https://twitter.com/dataisgone)
 
 ## Hackathon Info
-_Submitted to TartanHacks v10 (2021)
+_Submitted to TartanHacks v10 (2021)_
+
+- Demo: [Pitch Video](https://youtu.be/2WW6OzM3Tsc) 
+- Presentation: [Figma](https://www.figma.com/proto/K9vbHC7FOHrSxGh8OKOMYS/intarnet?node-id=1%3A2&viewport=-3432%2C516%2C0.2884855270385742&scaling=contain)
+
 
 ## Technologies
 **AR Mobile Dev**: Unity, C#, Azure, .NET Core, Poly, ARCore, ARKit, ARFoundation
