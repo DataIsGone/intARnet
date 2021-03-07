@@ -1,2 +1,4 @@
-# TartanHacks
+# intARnet
+
+## Credits
  
