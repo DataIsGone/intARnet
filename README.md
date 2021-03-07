@@ -1,6 +1,6 @@
 # IntARnet
 
-Welcome to the intARnet, the augmented-reality geospatial social media platform to connect with your community.
+Welcome to the IntARnet, the augmented-reality geospatial social media platform to connect with your community.
 
 [Enjoy your stay.](https://youtu.be/2WW6OzM3Tsc)
 
@@ -23,7 +23,8 @@ Azure Spatial Anchors :(
 - An incredibly aesthetic user interface reminiscent of the late 90s
 
 ## What we learned
-How to design for AR, 90s design style
+- How to design for AR, 90s design style
+- 
 
 ## What's next for IntARnet
 - Implementing Azure for geospatial anchors
@@ -46,6 +47,8 @@ How to design for AR, 90s design style
 **Design**: Figma, Aseprite, Adobe Photoshop
 
 ## Credits
-**Fonts**: [Early Gameboy](https://www.dafont.com/early-gameboy.font)
+**Fonts**: [Early Gameboy](https://www.dafont.com/early-gameboy.font) | [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 
 **Music**: ["Hourglass Meadow", by Oliver Buckland](https://www.youtube.com/watch?v=Urs2oS83Cw0)
+
+**Sound Effects**: [Mouse Click](https://www.youtube.com/watch?v=h6_8SlZZwvQ)
