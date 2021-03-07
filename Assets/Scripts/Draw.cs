@@ -15,6 +15,12 @@ public class Draw : MonoBehaviour
     public Sprite green;
     public Sprite blue;
     public Sprite white;
+    public Shader s;
+    public Material matR;
+    public Material matG;
+    public Material matB;
+    public Material matW;
+    private Material currColor;
 
     public static bool drawing = false;
 
@@ -25,6 +31,7 @@ public class Draw : MonoBehaviour
     void Start()
     {
         totalPost = GameObject.Find("TotalPost");
+        currColor = matR;
     }
 
     // Update is called once per frame
@@ -45,26 +52,33 @@ public class Draw : MonoBehaviour
         currentStroke = Instantiate(stroke, spacePenPoint.transform.position, spacePenPoint.transform.rotation) as GameObject;
         currentStroke.SetActive(true);
         currentStroke.transform.SetParent(spacePenPoint.transform);
+        currentStroke.GetComponent<Renderer>().material = currColor;
     }
 
     public void ChangeColor(int i) {
         Color cool = Color.white;
+        Material m = new Material(s);
         pencil.sprite = white;
+        currColor = matW;
         if (i == 1) //r
         {
             cool = Color.red;
             pencil.sprite = red;
+            currColor = matR;
         }
         else if (i == 2) { // g
             cool = Color.green;
             pencil.sprite = green;
+            currColor = matG;
         }
         else if (i == 3) //b
         {
             cool = Color.blue;
             pencil.sprite = blue;
+            currColor = matB;
         }
-        spacePenPoint.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", cool);
+        //m.color = cool;
+        //spacePenPoint.GetComponent<Renderer>().material = m;
         currentStroke.GetComponent<TrailRenderer>().startColor = cool;
         currentStroke.GetComponent<TrailRenderer>().endColor = cool;
     }
