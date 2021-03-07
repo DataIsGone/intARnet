@@ -1,4 +1,6 @@
 # intARnet
 
+## Technologies
+
 ## Credits
  
