@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
@@ -16,6 +17,10 @@ public class ButtonManager : MonoBehaviour
     public GameObject postUI;
     private GameObject totalPost;
     public GameObject submit;
+    public Image toggle;
+    public Sprite priv;
+    public Sprite pub;
+    public GameObject togGame;
 
     // Start is called before the first frame update
     void Start()
@@ -23,15 +28,27 @@ public class ButtonManager : MonoBehaviour
         totalPost = GameObject.Find("TotalPost");
     }
 
+    public void viewingMode() {
+        if (toggle.sprite == priv)
+        {
+            toggle.sprite = pub;
+        }
+        else {
+            toggle.sprite = priv;
+        }
+    }
+
     public void postModeActive() {
         if (addPost.activeSelf)
         {
             postUI.SetActive(true);
             addPost.SetActive(false);
+            togGame.SetActive(false);
         }
         else {
             postUI.SetActive(false);
             addPost.SetActive(true);
+            togGame.SetActive(true);
         }
     }
 
