@@ -11,7 +11,7 @@ public class PolyModelManager : MonoBehaviour
     public GameObject entry;
     public GameObject imageList;
     public List<GameObject> entries;
-    int numEntries = 10;
+    int numEntries = 40;
     int counter = 0;
     // Start is called before the first frame update
     void Start()
@@ -68,7 +68,8 @@ public class PolyModelManager : MonoBehaviour
             Vector3 pos = new Vector3(imageList.transform.position.x + 100 * i, imageList.transform.position.y, imageList.transform.position.z);
             entries.Add(Instantiate(entry, imageList.transform.position, Quaternion.identity));
             entry.name = "poly_" + i;
-            entries[i].GetComponent<RectTransform>().position = new Vector2(entries[i].GetComponent<RectTransform>().position.x + i * 100, entries[i].GetComponent<RectTransform>().position.y);
+            entries[i].GetComponent<RectTransform>().gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            entries[i].GetComponent<RectTransform>().position = new Vector2(entries[i].GetComponent<RectTransform>().position.x + i * 130, entries[i].GetComponent<RectTransform>().position.y);
             entries[i].SetActive(true);
             entries[i].transform.parent = imageList.transform;
             UnityEngine.Events.UnityAction action = delegate { buttonPress(poly); };

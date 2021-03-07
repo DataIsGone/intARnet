@@ -10,7 +10,8 @@ public class ButtonManager : MonoBehaviour
     public GameObject textPost;
     public TMP_InputField typeSpace;
     public GameObject drawMenu;
-    public GameObject penPoint;  
+    public GameObject penPoint;
+    public GameObject viewPos;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +31,12 @@ public class ButtonManager : MonoBehaviour
     public void createTextPost() {
         string text = typeSpace.text;
         setTextMenuActive(false);
-        GameObject post = Instantiate(textPost, Camera.main.transform.position + Camera.main.transform.forward * 1.5f, Quaternion.identity);
+        GameObject post = Instantiate(textPost, viewPos.transform.position + viewPos.transform.forward * 1.5f, Quaternion.identity);
         post.GetComponent<TextMeshPro>().text = text;
         post.AddComponent<MoveObj>();
         post.AddComponent<BoxCollider>();
         post.GetComponent<BoxCollider>().size = new Vector3(post.GetComponent<RectTransform>().sizeDelta.x, post.GetComponent<RectTransform>().sizeDelta.y, 3);
+        //post.transform.LookAt(viewPos.transform.position);
     }
 
     public void setTextMenuActive(bool b) {

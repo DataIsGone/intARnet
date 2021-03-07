@@ -691,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 4982218542414706564, guid: 08aa0197247a90247a53b7cde4687c57,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6597900490637111590, guid: 08aa0197247a90247a53b7cde4687c57,
         type: 3}
@@ -819,8 +819,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.52, y: 4.88, z: 0.72}
+  m_Center: {x: -5.2571197, y: -0.05, z: 0}
 --- !u!114 &429470250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,14 +869,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 10.264339, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -970,7 +970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &569871657
@@ -1327,6 +1327,7 @@ MonoBehaviour:
   typeSpace: {fileID: 1197361631}
   drawMenu: {fileID: 7754415483107792930}
   penPoint: {fileID: 824701798}
+  viewPos: {fileID: 824701798}
 --- !u!1 &920598286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,7 +2432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14 - update available (click to update).
   sections: 01010100
-  customRes: {x: 404, y: 227}
+  customRes: {x: 128, y: 227}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
@@ -2488,7 +2489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1875296843
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2566,9 +2567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14 - update available (click to update).
+  cfuStatus: PSXEffects v1.14
   sections: 01010100
-  customRes: {x: 155, y: 276}
+  customRes: {x: 265, y: 471}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
